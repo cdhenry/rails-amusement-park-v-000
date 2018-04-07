@@ -23,7 +23,14 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-           <!--  nav here -->
+            <% if !logged_in? %>
+              <li><a href="<%= new_user_path %>"/>Sign Up</a></li>
+              <li><a href="<%= signin_path %>"/>Sign In</a></li>
+            <% else %>
+              <li><a href="<%= root_url %>"/>Hello, <%= current_user.name %></a></li>
+              <li><a href="<%= root_url %>"/>Attractions</a></li>
+              <li><a href="<%= root_url %>"/>Log Out</a></li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
