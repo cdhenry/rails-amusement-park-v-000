@@ -27,8 +27,8 @@
               <li><a href="<%= new_user_path %>"/>Sign Up</a></li>
               <li><a href="<%= signin_path %>"/>Sign In</a></li>
             <% else %>
-              <li><a href="<%= root_url %>"/>Hello, <%= current_user.name %></a></li>
-              <li><a href="<%= root_url %>"/>Attractions</a></li>
+              <li><a href="<%= user_path %>"/>Hello, <%= current_user.name %></a></li>
+              <li><a href="<%= attractions_path %>"/>Attractions</a></li>
               <li><a href="<%= root_url %>"/>Log Out</a></li>
             <% end %>
           </ul>
